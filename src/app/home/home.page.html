@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+    <section id="box-bg"></section>
+    <main>
+        <h1>Classify transaction</h1>
+        <h2>Classify this transaction into a particular category</h2>
+        <section class="container">
+            <app-box [item]="item" *ngFor="let item of items"></app-box>
+        </section>
+    </main>
+    <footer>
+        <div [ngClass]="{'active': activedBar === 1}">
+            <i class="icon-calendar1" (click)="activedBar = 1"></i>
+        </div>
+        <div [ngClass]="{'active': activedBar === 2}">
+            <i class="icon-bar-chart-2" (click)="activedBar = 2"></i>
+        </div>
+        <div [ngClass]="{'active': activedBar === 3}">
+            <i class="icon-user2" (click)="activedBar = 3"></i>
+        </div>
+    </footer>
+</ion-content>

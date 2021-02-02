@@ -1,0 +1,87 @@
+@import '../../../assets/lennon-icons-v1.0/style.css';
+
+:host {
+  --bg-box-color: rgba(51, 50, 94, 0.5);
+}
+
+section {
+    border-radius: 20px;
+    background-color: rgba(58, 60, 98, 0.4);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "icon"
+        "text";
+    padding: 32px 16px;
+    backdrop-filter: blur(25px);
+    div.icon {
+        grid-area: icon;
+        text-align: center;
+        margin-bottom: 16px;
+        i {
+            color: var(--light-text-color);
+            padding: 0;
+            font-size: 24px;
+            margin: 0 auto;
+            width: 60px;
+            height: 60px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+        }
+    }
+    div.text {
+        grid-area: text;
+        text-align: center;
+        h1 {
+            margin: 0;
+            padding: 0;
+            color: var(--blue-light-text-color);
+            font-family: var(--ion-font-family);
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+    &.blue {
+        div.icon i {
+            background-image: linear-gradient(300deg, var(--blue-dark-text-color), var(--blue-light-text-color));
+        }
+        div.text h1 {
+            color: var(--blue-light-text-color);
+        }
+    }
+    &.purple {
+        div.icon i {
+            background-image: linear-gradient(300deg, var(--purple-dark-text-color), var(--purple-light-text-color));
+        }
+        div.text h1 {
+            color: var(--purple-light-text-color);
+        }
+    }
+    &.pink {
+        div.icon i {
+            background-image: linear-gradient(300deg, var(--pink-dark-text-color), var(--pink-light-text-color));
+        }
+        div.text h1 {
+            color: var(--pink-light-text-color);
+        }
+    }
+    &.orange {
+        div.icon i {
+            background-image: linear-gradient(300deg, var(--orange-dark-text-color), var(--orange-light-text-color));
+        }
+        div.text h1 {
+            color: var(--orange-light-text-color);
+        }
+    }
+    &.green {
+        div.icon i {
+            background-image: linear-gradient(300deg, var(--green-dark-text-color), var(--green-light-text-color));
+        }
+        div.text h1 {
+            color: var(--green-light-text-color);
+        }
+    }
+}

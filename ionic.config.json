@@ -1,0 +1,7 @@
+{
+  "name": "darktransparent",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
